@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<main role="main">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="description" content="Wordraw">
+			<meta name="author" content="GhostRooster">
+			<title>Wordraw</title>
+			<link rel="stylesheet" href="styles.css">
+		</head>
+		<body>
+			<h1>Wordraw</h1>
+			<img src="wordraw0.png" id="myImage" width="500" height="500">
+    		
+
+    		<script>
+        		function changeImage() {
+           		 var image = document.getElementById('myImage');
+				if(document.getElementById("inpt").value == "hotdog") {
+					alert("You win. Naisu!");
+					image.src = "wordraw5.png";
+				}
+           		else if (image.src.match("wordraw0.png")) {
+            	    image.src = "wordraw1.png";
+         	     }
+				 else if (image.src.match("wordraw1.png")) {
+            	    image.src = "wordraw2.png";
+         	     }
+				 else if (image.src.match("wordraw2.png")) {
+            	    image.src = "wordraw3.png";
+         	     }
+			     else if (image.src.match("wordraw3.png")) {
+            	    image.src = "wordraw4.png";
+         	     }
+				 else if (image.src.match("wordraw4.png")) {
+            	    image.src = "wordraw5.png";
+         	     }
+				 else if (image.src.match("wordraw5.png")) {
+            	    alert("The image was hotdog");
+         	     }
+     	  	 }
+  			</script>
+		    <p>Enter guess:</p>
+			<input style="margin-bottom: 10px" id="inpt" type="text"></input>
+			<input type="button" onclick="changeImage()" value="Guess" />	
+	</main>
+	</body>
+</html>
